@@ -9,3 +9,4 @@ applications:
     command: npm start
 env:
   MONGODB: mongodb://germfy:r56U71ob@ds147942.mlab.com:47942/ironhackptabr2018
+  PORT: 3000
