@@ -19,7 +19,7 @@ const flash = require("connect-flash");
 
 mongoose
   .connect(
-    process.env.MONGODB,
+    "mongodb://germfy:r56U71ob@ds147942.mlab.com:47942/ironhackptabr2018",
     { useNewUrlParser: true }
   )
   .then(x => {
