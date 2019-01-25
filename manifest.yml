@@ -2,11 +2,10 @@
 applications:
   - instances: 1
     name: sociallogingerman24ene
-    memory: 128M
+    memory: 64M
     domain: mybluemix.net
     host: sociallogingerman24ene
     path: .
     command: npm start
 env:
   MONGODB: mongodb://germfy:r56U71ob@ds147942.mlab.com:47942/ironhackptabr2018
-  PORT: 3000
