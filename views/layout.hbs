@@ -11,8 +11,29 @@
 </head>
 
 <body>
+  <div class="hamburger">
+    <span class="hamburger__line"></span>
+    <span class="hamburger__line"></span>
+    <span class="hamburger__line"></span>
+    <span class="visually-hidden">Menu</span>
+  </div>
+  <nav>
+    <ul class="menu">
+      {{#unless user}}
+        <li class="menu__item"><a href="/auth/slack" class="menu__link">Ingresa con Slack</a></li>
+        <li class="menu__item"><a href="/auth/google" class="menu__link">Ingresa con Google</a></li>
+        <li class="menu__item"><a href="/login" class="menu__link">Ingresa con tu correo</a></li>
+        <li class="menu__item"><a href="/signup" class="menu__link">Crea tu cuenta</a></li>
+      {{/unless}}
+      {{#if user}}
+        <li class="menu__item"><a href="/private" class="menu__link">Tu página privada</a></li>
+        <li class="menu__item"><a href="/logout" class="menu__link">Cierra tu sesión</a></li>
+      {{/if}}
+    </ul>
+  </nav>
   {{{body}}}
 
+  <script src="javascripts/hamburger-toggle.js" async defer></script>
   <script src="/javascripts/script.js"></script>
 </body>
 
