@@ -16,6 +16,8 @@ const SlackStrategy = require("passport-slack").Strategy;
 const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 const User = require("./models/user");
 const flash = require("connect-flash");
+
+//añadido para sesiones persistentes
 const MongoStore = require("connect-mongo")(session);
 
 mongoose
@@ -49,6 +51,7 @@ app.use(
     secret: "jafsjlafsjopafsjpofañnafslnkafsñklasf",
     resave: true,
     saveUninitialized: true,
+      // Store en Mongo para las sesiones
     store: new MongoStore({ mongooseConnection: mongoose.connection })
   })
 );
